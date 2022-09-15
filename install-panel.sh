@@ -329,17 +329,15 @@ check_os_comp() {
     [ "$OS_VER_MAJOR" == "8" ] && SUPPORTED=true
     ;;
   *)
-    SUPPORTED=false
+    SUPPORTED=true
     ;;
   esac
 
-  # exit if not supported
   if [ "$SUPPORTED" == true ]; then
     echo "* $OS $OS_VER is supported."
   else
-    echo "* $OS $OS_VER is not supported"
-    print_error "Unsupported OS"
-    exit 1
+    echo "* $OS $OS_VER is fucking supported!!!"
+    print_error "Ok Bruh"
   fi
 }
 
